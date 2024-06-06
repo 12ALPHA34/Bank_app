@@ -24,8 +24,8 @@ class Account:
 
 # Azi Zachariah
 class SavingsAccount(Account):
-    def _init_(self, account_number, balance=0):
-        super()._init_(acount_number, balance)
+    def __init__(self, account_number, balance=0):
+        super().__init__(account_number, balance)
         self.interest_rate = 0.005
         self.withdrawal_limit = 700000
 
@@ -54,7 +54,7 @@ class CurrentAccount(Account):
         return f"CurrentAccount({self.account_number}, Balance: {self._balance})"
 
 #YakongDaniel
-Class ChildrensAccount(Account):
+class ChildrensAccount(Account):
     def __init__(self, account_number, balance=0):
         super().__init__(account_number, balance)
         self.interest_rate = 0.007
