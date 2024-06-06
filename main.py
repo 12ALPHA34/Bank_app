@@ -46,7 +46,7 @@ class SavingsAccount(Account):
          return f"SavingsAccount({self.account_number}, Balance:{self._bjalance})"
 
     #Lahanre
-        class CurrentAccount(Account):
+class CurrentAccount(Account):
     def __init__(self, account_number, balance=0):
         super().__init__(account_number, balance)
 
