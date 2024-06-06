@@ -40,6 +40,20 @@ class SavingsAccount(Account):
          if amount <= self.withdrawal_limit:
              return super().withdraw(amount)
          return False
+        
 
     def _str_(self):
-         return f"SavingsAccount({self.account_number}, Balance:{self._balance})"
+         return f"SavingsAccount({self.account_number}, Balance:{self._bjalance})"
+
+    #Lahanre
+        class CurrentAccount(Account):
+    def __init__(self, account_number, balance=0):
+        super().__init__(account_number, balance)
+
+    def __str__(self):
+        return f"CurrentAccount({self.account_number}, Balance: {self._balance})"
+
+
+
+
+
