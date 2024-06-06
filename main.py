@@ -24,25 +24,22 @@ class Account:
 
 # Azi Zachariah
 class SavingsAccount(Account):
-    def_init_(self, account_number, balance=0):
-
-super()._init_(acount_number, balance)
-    self.interest_rate = 0.5
-    self.withdrawal_limit = 700000
+    def _init_(self, account_number, balance=0):
+        super()._init_(acount_number, balance)
+        self.interest_rate = 0.005
+        self.withdrawal_limit = 700000
 
     def deposit(self, amount):
         if super().deposit(amount):
             self._balance += amount
-    self.interest_rate
+            self.interest_rate
             return True
         return False
 
     def withdraw(self, amount):
-         if amount <=
-self.withdrawal_limit:
-             return
-super().withdraw(amount)
+         if amount <= self.withdrawal_limit:
+             return super().withdraw(amount)
          return False
 
-    def_str_(self):
+    def _str_(self):
          return f"SavingsAccount({self.account_number}, Balance:{self._balance})"
